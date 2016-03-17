@@ -6,7 +6,7 @@ Some old sketch-a-days I made between June 1st and July 16th, 2015 that I went t
 <table>
   <tr>
     <td>
-      <img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/stringArrangement_004.png"width="600">
+      <a href="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_08_stringArrangement"><img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_08_stringArrangement/stringArrangement.gif"width="600"></a>
     </td>
     <td>
       <img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/weirdBall_3025.png"width="600">
@@ -31,7 +31,3 @@ Some old sketch-a-days I made between June 1st and July 16th, 2015 that I went t
     <td>
       <a href="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_04_squareConnectors"><img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_04_squareConnectors/squareConnectors_square.gif"width="600"></a>
     </td>
-
-<!-- |![String_Arrangement](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/stringArrangement_004.png)|![Image of Yaktocat](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/weirdBall_3025.png)|![ripple_paths](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/ripplePaths_5790.png)|![bubbles](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/bubbles_426.png)|
-|-------------------------|-------------------------|-------------------------|-------------------------|
-|![cacti](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/cacti_117.jpg)|![mushroom](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/mushRoomsColorShader_6207.png)|![ui_cylinder](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/uiCylinder_3404.png)|![square_connectors](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/squareConnectors_413.png)| -->
