@@ -6,7 +6,7 @@ int numPoints = 1000;  // Number of points
 int minDistanceForConnection = 40;  // Smallest distance required for connection
 
 void setup()  {
-  size( 1200, 800 );
+  size( 800, 800 );
   background( 255 );
   for ( int i = 0 ; i < numPoints ; i++ )  {  // Iterates. Initializing points
     points.add( new Point(i) );
@@ -25,8 +25,6 @@ void draw()  {
       float dist = abs( dist( points.get(k).x, points.get(k).y, points.get(j).x, points.get(j).y ) );
       if ( dist < minDistanceForConnection && k != j && !points.get(k).connectedTo.contains(j) )  {  // Checks to make sure the point is close enough to connect
         connectors.add( new Connector( k, j ) );  // Connects point
-//        points.get(k).connectedTo.add(j);
-//        points.get(j).connectedTo.add(k);
       }
     }
   }
@@ -34,4 +32,5 @@ void draw()  {
       connectors.get(i).draw();  // Draws connector
   }
   connectors.clear();  // Destroys the connectors
+  saveFrame( "springConnectors_gif_###.png" );
 }
