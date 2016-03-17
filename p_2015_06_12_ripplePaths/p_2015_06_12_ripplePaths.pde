@@ -36,6 +36,7 @@ void draw()  {
      ripples.get(i).clean();       // Removes ripples that are far enough off the screen
    }  
   }
+  saveFrame( "ripplePaths_gif_###.png" );
 }
 
 void mousePressed()  {  // If mouse is pressed
