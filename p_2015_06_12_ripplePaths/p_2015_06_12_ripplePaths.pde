@@ -9,7 +9,7 @@
 ArrayList<Ripple> ripples;                 // List containing ripples currently being used
 int rippleSize = 3;                        // Number of circles per ripple
 float particleSizeIncrement = 0.1;       // How fast the radius of the particle grows
-float particleOffsetAngle = PI/4;          // Angle to rotate the ripple
+float particleOffsetAngle = PI/2;          // Angle to rotate the ripple
 
 // Colors
 color lifeColor = color( 255, 255, 255 );  // Particle color in life
@@ -22,6 +22,12 @@ void setup()  {
  ripples = new ArrayList<Ripple>();
  fill( lifeColor ); // Sets fill to lifeColor
  stroke( strokeColor );  // Sets stroke to strokeColor
+ ripples.add( new Ripple( width/4, height/4, rippleSize ) );
+ ripples.add( new Ripple( 3*width/4, height/4, rippleSize ) );
+ ripples.add( new Ripple( 2*width/4, height/4, rippleSize ) );
+ //ripples.add( new Ripple( width/4, 3*height/4, rippleSize ) );
+ //ripples.add( new Ripple( 3*width/4, 3*height/4, rippleSize ) );
+ ripples.add( new Ripple( 2*width/4, 3*height/4, rippleSize ) );
 }
 void draw()  {
   for ( int i = 0 ; i < ripples.size() ; i++ )  {  // Iterates through currently active ripples
@@ -36,7 +42,6 @@ void draw()  {
      ripples.get(i).clean();       // Removes ripples that are far enough off the screen
    }  
   }
-  saveFrame( "ripplePaths_gif_###.png" );
 }
 
 void mousePressed()  {  // If mouse is pressed

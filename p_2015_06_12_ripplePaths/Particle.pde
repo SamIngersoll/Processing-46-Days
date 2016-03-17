@@ -19,8 +19,8 @@ class Particle  {
   ellipse( x, y, r, r );
  } 
  void move()  {  // Moves the particle by adding xVelocity and yVelocity to x and y values
-   this.x += this.xVel;
-   this.y += this.yVel;
+   this.x += 5*this.xVel;
+   this.y += 5*this.yVel;
  }
  void incrementSize()  {  // Increses the radius of the particle by 0.1
   this.r += particleSizeIncrement; 
