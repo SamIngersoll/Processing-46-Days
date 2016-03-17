@@ -66,7 +66,8 @@ void draw()  {
   translate( 0, 200*noise(counter+r.offset), 0 );  // Changes translation value slightly
   r.draw();  // Draws rod
   counter += increment; 
-  cameraCounter += 0.01;
+  cameraCounter += 0.07;
+  saveFrame( "uiCylinder_gif_###.png" );
 }
 
 void mousePressed()  {  // Reload the scene if the mouse is pressed
