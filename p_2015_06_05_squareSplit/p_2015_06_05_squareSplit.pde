@@ -34,4 +34,5 @@ void draw()  {
   p.move();  // Moves the ball
   p.checkWalls();  // Checks if we need to collide with the walls
   p.draw();  // Draws the ball
+  saveFrame( "squareSplit_gif_###.png" );
 }

@@ -31,8 +31,7 @@ void draw() {
     tigers.get(i).checkEdges();  // Checks the edges of the box
     tigers.get(i).checkRadius(i);  // Checks if the object needs to get recycled
   }
-//  if ( counter % 100 == 0 )
-//    background( 0 );
+  saveFrame( "squareConnectors_gif_###.png" );
 }
 
 void mousePressed()  {  // Creates a new object at the point of the mouse press
