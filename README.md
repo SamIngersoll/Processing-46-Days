@@ -31,3 +31,5 @@ Some old sketch-a-days I made between June 1st and July 16th, 2015 that I went t
     <td>
       <a href="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_04_squareConnectors"><img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_04_squareConnectors/squareConnectors_square.gif"width="600"></a>
     </td>
+  </tr>
+</table>

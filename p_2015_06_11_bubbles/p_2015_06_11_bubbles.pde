@@ -21,8 +21,8 @@ void draw()  {
    counter++;
   }
 //  fill( 0 );
-  textSize( 100 );  // Writes text
-  text( "bubbles", width/2-150, height/2 );
+  //textSize( 100 );  // Writes text
+  //text( "bubbles", width/2-150, height/2 );
 }
 void keyPressed()  {  // Saves current frame
  saveFrame( "bubbles_###.png"); 
