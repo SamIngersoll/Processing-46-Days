@@ -12,7 +12,6 @@ void setup()  {
   rectMode( CENTER );
 }
 void draw()  {
-  saveFrame( "imagePixel_gif_###.png" ); 
   for ( int i = 0 ; i < img.width ; i+=3 )  {       // Iterates over each pixel in the width of the picture
     for ( int j = 0 ; j < img.height ; j+=3 )  {    // Iterates over each pixel in the height of the picture
       fill( img.get( i, j ) );                        // Sets the fill to the color current pixel

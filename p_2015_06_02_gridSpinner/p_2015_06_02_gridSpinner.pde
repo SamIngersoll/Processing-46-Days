@@ -2,7 +2,7 @@
   // Press any key to save the current frame
 
 int lengthOfEdges = 10;  // Number of points in arms  
-int l = 30;  // Period & length control
+int l = 15;  // Period & length control
 float[][][] pts = new float[lengthOfEdges][l][3];  // Array of points
 float c = 0;  // Counter starts at zero
 
@@ -37,11 +37,11 @@ void spin( float[][][] pts )  {
     for ( int i = 0 ; i < pts[0].length ; i++ )  {  // Iterates over l
       addRadius( pts );  // Increments the angle
       theta = i+c*2*PI/(l-1);
-      pts[b][i][0] = pts[b][i][2]*cos(theta)*b;  // Changes the x value of the current point
-      pts[b][i][1] = pts[b][i][2]*sin(theta)*b;  // Changes the y value of the current point
-//      pts[b][i][0] = 40*cos(theta)*b;  // Use this and not the previous two line for a different effect
-//      pts[b][i][1] = 40*sin(theta)*b;
-      strokeWeight( 3 );
+      //pts[b][i][0] = pts[b][i][2]*cos(theta)*b;  // Changes the x value of the current point
+      //pts[b][i][1] = pts[b][i][2]*sin(theta)*b;  // Changes the y value of the current point
+      pts[b][i][0] = 40*sin(theta)*b;  // Use this and not the previous two line for a different effect
+      pts[b][i][1] = 40*1/cos(theta)*b;  // Try changin the trig function for fun changes
+     strokeWeight( 3 );
       point( pts[b][i][0] + width/2, pts[b][i][1] + height/2 );  // Draws the active point
       strokeWeight(0.1);
       if ( i < pts[0].length - 1 )  { // If we are not dealing with the last point in one of the lines
