@@ -7,7 +7,7 @@ int[] radii = {50, 100, 150, 200, 400, 800 };         // List of radii of the ci
 int[] dotsPerCircle = {20, 10, 300, 50, 200, 200};    // List of dots for each of the circles **(must have same length as above)**
 
 void setup()  {
-  size( 1200, 800 );
+  size( 800, 800 );
   background( 255 );
 
   for ( int i = 0 ; i < radii.length ; i++ )  {            // Iterates over radii array to create circles
@@ -24,7 +24,6 @@ void draw()  {
   // Iterates over circles
   for ( int i = 0 ; i < radii.length ; i++ )  {  
       circles.get(i).draw();  // Tells each circle to draw itself
-      
   }
 }
 
