@@ -22,6 +22,7 @@ void draw()  {
   popMatrix();  // End transformations
   shape(bg);  // Draw our background gradient
   angle += 0.01;  // Increment our angle counter
+  saveFrame( "mushRoomsColorShader_gif_###.png" );
 }
 
 PShape createMass()  {  // Function for creating mushroom object
