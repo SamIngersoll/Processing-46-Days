@@ -13,7 +13,6 @@ void setup() {
 
 void draw() {
   background( 0 );
-
   for ( int i = 0 ; i < tigers.size() ; i++ )  {  // Iterates through objects
     tigers.get(i).draw();  // Draws objects
     tigers.get(i).connect();  // Connects objects
