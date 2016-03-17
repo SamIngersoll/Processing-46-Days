@@ -7,7 +7,7 @@
   //  (1-9, to get larger ripples, change rippleSize global variable)
 
 ArrayList<Ripple> ripples;                 // List containing ripples currently being used
-int rippleSize = 100;                        // Number of circles per ripple
+int rippleSize = 3;                        // Number of circles per ripple
 float particleSizeIncrement = 0.1;       // How fast the radius of the particle grows
 float particleOffsetAngle = PI/4;          // Angle to rotate the ripple
 

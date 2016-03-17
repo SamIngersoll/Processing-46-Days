@@ -9,7 +9,7 @@ class Knot  {
     this.acceleration = new PVector();
     this.maxLength = maxLength;
   }
-  void move()  {
+  void move()  {  // Move knot by gravity
    applyGravity();
    this.velocity.add(this.acceleration);
    this.position.add(this.velocity);
@@ -18,15 +18,15 @@ class Knot  {
    this.velocity.div(1.09);
    
   }
-  void draw()  {
+  void draw()  {  // Draws knot
    strokeWeight( 3 );
    point( position.x, position.y ); 
   }
-  void applyGravity()  {
+  void applyGravity()  {  // Apply gravity
    this.acceleration.add( gravity ); 
    this.acceleration.add( wind );
   }
-  PVector applyForce( PVector kPosition )  {
+  PVector applyForce( PVector kPosition )  {  // Applies force based on position
     PVector f = PVector.sub(this.position,kPosition);
     f.mult(-0.04);
     f.div(this.maxLength);
@@ -34,4 +34,3 @@ class Knot  {
     return f;
   }
 }
-

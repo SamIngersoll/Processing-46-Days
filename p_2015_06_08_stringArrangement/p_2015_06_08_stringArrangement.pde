@@ -1,5 +1,5 @@
 // SAM INGERSOLL //
-  // Press any key to save the current frame
+// Press any key to save the current frame
 
 ArrayList<Point> points = new ArrayList<Point>();     // Total list of points
 ArrayList<Circle> circles = new ArrayList<Circle>();  // List of circles

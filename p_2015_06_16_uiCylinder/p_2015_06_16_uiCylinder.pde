@@ -1,10 +1,14 @@
-int numDotsRings;
+// SAM INGERSOLL //
+// Move the mouse around to change your view
+// Click to reload
+
+int numDotsRings;  // Number of rings formed by floating dots
 ArrayList<DotsRing> dotsRings = new ArrayList<DotsRing>();
-int numRings;
+int numRings;  // Number of normal rings
 ArrayList<Ring> rings = new ArrayList<Ring>();
-int numRods;
+int numRods;  // Number of solid rods
 ArrayList<Rod> rods = new ArrayList<Rod>();
-Rod r;
+Rod r;  // Center rod
 float cameraCounter = 0;
 float counter = 0;
 float increment = 0.01;
@@ -37,42 +41,42 @@ void setup()  {
 
 void draw()  {
   camera(1.5*mouseX, 1.5*mouseY, (mouseY+200/2.0) / tan(PI*30.0 / 180.0), 
-         0, 0, 0, 0.5, 0, 0);
+         0, 0, 0, 0.5, 0, 0);  // Changes camera position based on mouse position
   background( 0 );
-  rotateX(cameraCounter);
-  for ( int i = 0 ; i < dotsRings.size() ; i++ )  {
-   pushMatrix();
+  rotateX(cameraCounter);  // Constantly rotating based on counter
+  for ( int i = 0 ; i < dotsRings.size() ; i++ )  {  // Iterates over dots rings
+   pushMatrix();  // Begins transformations
    rotateY( noise(counter+dotsRings.get(i).offset) );
    translate( 0, 200*noise(counter+dotsRings.get(i).offset), 0 );
    dotsRings.get( i ).draw(); 
-   popMatrix();
+   popMatrix();  // Ends transformations
 
   }
-  for ( int i = 0 ; i < rods.size() ; i++ )  {
+  for ( int i = 0 ; i < rods.size() ; i++ )  {  // Iterates over rods
    rotateY( noise(counter+rods.get(i).offset) );
    translate( 0, 200*noise(counter+rods.get(i).offset), 0 );
    rods.get( i ).draw(); 
   }
-  for ( int i = 0 ; i < rings.size() ; i++ )  { 
+  for ( int i = 0 ; i < rings.size() ; i++ )  {   // Iterates over rings
    rotateY( noise(counter+rings.get(i).offset) );
    translate( 0, 200*noise(counter+rings.get(i).offset), 0 );
    rings.get( i ).draw(); 
   }
-  rotateY( noise(counter+r.offset) );
-  translate( 0, 200*noise(counter+r.offset), 0 );
-  r.draw();
-  counter += increment;
+  rotateY( noise(counter+r.offset) );  // Changes rotation value slightly
+  translate( 0, 200*noise(counter+r.offset), 0 );  // Changes translation value slightly
+  r.draw();  // Draws rod
+  counter += increment; 
   cameraCounter += 0.01;
 }
 
-void mousePressed()  {
+void mousePressed()  {  // Reload the scene if the mouse is pressed
  dotsRings.clear(); 
  rings.clear();
  rods.clear();
  setup();
 }
 
-void keyPressed()  {
+void keyPressed()  {  // Save the current frame if the 's' key is pressed
  if ( key == 's' )  {
   saveFrame( "uiCylinder_###.png" );
  } 

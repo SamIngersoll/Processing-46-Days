@@ -1,3 +1,7 @@
+// SAM INGERSOLL //
+// Click to create ripple
+// Drag to rotate
+
 import peasy.test.*;
 import peasy.org.apache.commons.math.*;
 import peasy.*;
@@ -33,7 +37,6 @@ void draw()  {
   shape( drawShape() );
   stroke( 255, 255, 255 );
   strokeWeight( 10 );
-  p.draw();
   if ( startRipple )  {
     ripple();
   }
@@ -46,7 +49,6 @@ PShape drawShape()  {
   sh.fill( 255, 100, 100, 100 );
   for ( int i=0 ; i<W ; i++ )  {
     for ( int j=0 ; j<H ; j++ )  {
-      points[i][j].draw();
       if ( j > 0 && i > 0 )  {
        sh.stroke( points[i][j].str );
        sh.vertex( points[i-1][j-1].position.x, points[i-1][j-1].position.y, points[i-1][j-1].position.z );

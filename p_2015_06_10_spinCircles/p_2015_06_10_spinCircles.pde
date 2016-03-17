@@ -43,21 +43,4 @@ void draw()  {
     count++;
     }
   }
-//  rotatePoints();
-//  counter += 1;
-}
-
-void connectPoints()  {  // Iterates over points in circles, connecting them to the next smallest circle.
-  for ( int j = 0 ; j < radius.length ; j++ )  {
-    for ( int i = 0 ; i < pointsPer[j] ; i++ )  {
-      if ( j < radius.length-1 )  {
-        for ( int k = 0 ; k < pointsPer[j+1] ; k++ )  {
-//          float distance = 
-//          if ( dist( points.get(i).x, points.get(i).y, points.get(k).x, points.get(k).y )
-//          beginShape();
-          
-        }  
-      }
-    }
-  }
 }

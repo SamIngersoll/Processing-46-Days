@@ -1,3 +1,5 @@
+// SAM INGERSOLL //
+
 import peasy.test.*;
 import peasy.org.apache.commons.math.*;
 import peasy.*;
@@ -18,4 +20,3 @@ void draw()  {
   p.draw();  // Draws pulse
   p.move();  // Moves the pulse
 }
-

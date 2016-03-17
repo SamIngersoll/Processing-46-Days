@@ -1,17 +1,19 @@
+// SAM INGERSOLL //
+
 import peasy.test.*;
 import peasy.org.apache.commons.math.*;
 import peasy.*;
 import peasy.org.apache.commons.math.geometry.*;
 
-PeasyCam cam;
-Pulse p;
-Walker w;
+PeasyCam cam;  // Declares camera
+Pulse p;  // Declares pulse
+Walker w;  // Declares walker
 
 void setup() {
   size( 800, 800, P3D );
   background( 0 );
   ellipseMode( CENTER );
-  cam = new PeasyCam( this, 500 );
+  cam = new PeasyCam( this, 500 ); 
   p = new Pulse();
   fill( 200, 200, 200 );
 //  stroke( 0, 0, 0, 20 );
@@ -23,4 +25,3 @@ void draw() {
   p.draw();
   p.move();
 }
-

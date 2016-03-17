@@ -8,21 +8,21 @@ class Body  {
   this.acceleration = new PVector( 0, 0 );
   this.r = 40;
  }
- void draw()  {
+ void draw()  {  // Change stroke color based on velocity, draw point
   stroke( map(velocity.mag(), 0, 20, 0, 255 ), 0, 0 );
   point( position.x, position.y );
   
  }
- void move()  {
+ void move()  {  // Updates position from velocity, updates velocity from acceleration
   checkWalls();
   this.position.add(this.velocity);
   this.velocity.limit( maxVel );
   this.velocity.add(this.acceleration);
   if ( this.velocity.mag() != 0 )
     this.velocity.sub( 1, 1, 1);
-  this.acceleration.mult(0);
+  this.acceleration.mult(0);  // A new acceleration is given by attract() each iteration
  }
- void attract( ArrayList<Body> bodies )  {
+ void attract( ArrayList<Body> bodies )  {  // Figure out attractions between bodies
   for ( int i = 0 ; i < bodies.size() ; i++ )  {
    Body b = bodies.get( i );
    float dist = dist( position.x, position.y, position.z,
@@ -32,7 +32,7 @@ class Body  {
    }     
   }
  }
- void applyForce( PVector p, float rad )  {
+ void applyForce( PVector p, float rad )  {  // Turn forces into accelerations
    float dist = PVector.dist( this.position, p );
    if ( dist < this.r+this.r )  {
      this.acceleration.mult( 0 );
@@ -43,7 +43,7 @@ class Body  {
      this.acceleration.mult( f ); 
    }
  }
- void checkWalls()  {
+ void checkWalls()  {  // Check for collisions with the walls
   if ( this.position.x + this.r > width ) {
    this.velocity.x = -1 * abs(this.velocity.x); 
   }

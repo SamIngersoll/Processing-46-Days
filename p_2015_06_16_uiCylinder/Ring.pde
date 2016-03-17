@@ -1,10 +1,10 @@
 
 
-class DotsRing  {
+class DotsRing  {  // Dots ring class
  float x, y, z, r, strokeWeight, offset;
  int numPoints;
  color stroke;
- DotsRing( float x, float y, float z, float r, int numPoints )  {
+ DotsRing( float x, float y, float z, float r, int numPoints )  {  // Constructor
    this.x = x;
    this.y = y;
    this.z = z;
@@ -14,17 +14,17 @@ class DotsRing  {
    this.strokeWeight = random( 1, 3 );
    this.stroke = color( 100, random( 0, 200 ), random( 200, 255 ) );
  }
- void draw()  {
+ void draw()  {  // Draws the ring
   strokeWeight( strokeWeight );
   stroke( this.stroke );
-  for ( int i = 0 ; i < numPoints ; i++  )  {
+  for ( int i = 0 ; i < numPoints ; i++  )  {  // Iterates around radius
    float theta = TWO_PI/numPoints;
-   point( this.r*cos(theta*i), y, this.r*sin(theta*i) );
+   point( this.r*cos(theta*i), y, this.r*sin(theta*i) );  // Draws points around radius
   }
  }
 }
 
-class Ring  {
+class Ring  {  // Solid ring class
  PShape sh;
  float x, y, z, r1, r2, offset;
  boolean complete;
@@ -48,19 +48,19 @@ class Ring  {
   sh.beginShape( QUAD_STRIP );
   sh.stroke( random(100,255), 0, random(100, 255) );
   sh.fill( 0, 0, 255, 50 );
-  for ( int i = 0 ; i <= trueDetail ; i++  )  {
+  for ( int i = 0 ; i <= trueDetail ; i++  )  {  // Iterates around center at two radii making quads
    float theta = TWO_PI/detail;
    sh.vertex( this.r1*cos(theta*i), y, this.r1*sin(theta*i) );
    sh.vertex( this.r2*cos(theta*i), y, this.r2*sin(theta*i) );
   } 
   sh.endShape();
  }
- void draw()  {
+ void draw()  {  // Draws ring
   shape( sh ); 
  }
 }
 
-class Rod  {
+class Rod  {  // Solid rod
  PShape sh;
  float x, y, z, r1, r2, offset, thickness;
  int detail;
@@ -81,24 +81,19 @@ class Rod  {
    else if ( temp == 0 )
      filled = false;
  }
- void create()  {
+ void create()  {  // Creates solid rod
   sh = createShape();
   sh.beginShape( QUAD_STRIP );
   sh.stroke( 250, 100, 255 );
   sh.fill( random(255), random(100), 255, random( 255 ) );
-  for ( int i = 0 ; i <= detail ; i++ )  {
+  for ( int i = 0 ; i <= detail ; i++ )  {  // Iterates around both caps and draws quads
     float theta = TWO_PI/detail;
     sh.vertex( this.r1*cos(theta*i), y+-thickness/2, this.r1*sin(theta*i)  );
     sh.vertex( this.r1*cos(theta*i), y+thickness/2, this.r1*sin(theta*i) );
   }
-  for ( int i = 0 ; i <= detail ; i++ )  {
-    float theta = TWO_PI/detail;
-    sh.vertex( this.r2*cos(theta*i), y+-thickness/2, this.r2*sin(theta*i)  );
-    sh.vertex( this.r2*cos(theta*i), y+thickness/2, this.r2*sin(theta*i) );
-  }
   sh.endShape();
  } 
- void draw()  {
+ void draw()  {  // Draws rod
   shape( sh ); 
  }
   

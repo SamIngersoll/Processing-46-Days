@@ -1,5 +1,5 @@
 
-void ripple()  {
+void ripple()  {  // Ripple class
   for ( int i=0 ; i<W ; i++ )  {
     for ( int j=0 ; j<H ; j++ )  {
       if ( abs(PVector.dist( points[i][j].position, origin ) ) > distCounter || 
@@ -17,4 +17,3 @@ void ripple()  {
   distCounter += 4;
   rippleThickness +=2;
 }
-

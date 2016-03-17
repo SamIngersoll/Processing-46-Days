@@ -19,19 +19,19 @@ class Walker  {
   this.direction = direction;
  } 
  
- void draw()  {
+ void draw()  {  // Draws a sphere at walker position
   pushMatrix();
   translate( this.x, this.y, this.z );
   sphere( this.r ); 
   popMatrix();
  }
- void move()  {
+ void move()  {  // Moves walker
    this.x += direction.x;
    this.y += direction.y;
    this.z += direction.z;
 
  }
- void divide()  {
+ void divide()  {  // Divides walker
    float bound = random(0.00005);
    float x_ = random(-bound, bound);
    float y_ = random(-bound, bound);

@@ -1,5 +1,5 @@
 
-class Rope  {
+class Rope  {  // Rope
  int numKnots;
  ArrayList<Integer> anchored;
  ArrayList<Knot> knots;
@@ -16,7 +16,7 @@ class Rope  {
      }
    }
  }
- void move()  {
+ void move()  {  // Move all knots in rope, knots exert forces on other knots
    for ( int i=0 ; i<knots.size() ; i++ )  {
      if ( i > 0 && i < knots.size()-1 )  {
        Knot future = knots.get(i+1);
