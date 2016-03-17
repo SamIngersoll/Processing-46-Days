@@ -32,5 +32,4 @@ void draw()  {
       connectors.get(i).draw();  // Draws connector
   }
   connectors.clear();  // Destroys the connectors
-  saveFrame( "springConnectors_gif_###.png" );
 }
