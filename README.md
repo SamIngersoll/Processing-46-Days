@@ -29,7 +29,7 @@ Some old sketch-a-days I made between June 1st and July 16th, 2015 that I went t
       <img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/uiCylinder_3404.png"width="600">
     </td>
     <td>
-      <a href="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_04_squareConnectors"><img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_04_squareConnectors/squareConnectors.gif"width="600"></a>
+      <a href="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_04_squareConnectors"><img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_04_squareConnectors/squareConnectors_square.gif"width="600"></a>
     </td>
 
 <!-- |![String_Arrangement](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/stringArrangement_004.png)|![Image of Yaktocat](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/weirdBall_3025.png)|![ripple_paths](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/ripplePaths_5790.png)|![bubbles](https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/bubbles_426.png)|

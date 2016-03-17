@@ -7,7 +7,7 @@ ArrayList<Point> points = new ArrayList<Point>();  // List of points
 int counter = 0;  // Timer
 
 void setup() {
-  size( 1400, 800 );
+  size( 800, 800 );
   background( 0 );
   noFill();
   strokeWeight( 1 );
@@ -31,7 +31,6 @@ void draw() {
     tigers.get(i).checkEdges();  // Checks the edges of the box
     tigers.get(i).checkRadius(i);  // Checks if the object needs to get recycled
   }
-  saveFrame( "squareConnectors_gif_###.png" );
 }
 
 void mousePressed()  {  // Creates a new object at the point of the mouse press
