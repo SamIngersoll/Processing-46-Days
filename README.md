@@ -12,11 +12,11 @@ Some old sketch-a-days I made between June 1st and July 16th, 2015 that I went t
       <img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/weirdBall_3025.png"width="600">
     </td>
     <td>
-      <img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/ripplePaths_5790.png"width="600">
+      <a href="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_12_ripplePaths"><img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_12_ripplePaths/ripplePaths.gif"width="600"></a>
     </td>
     <td>
-      <img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/Images/bubbles_426.png"width="600">
-    </td>
+      <a href="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_11_bubbles"><img src="https://github.com/SamIngersoll/Processing-46-Days/blob/master/p_2015_06_11_bubbles/bubbles.gif"width="600">
+    </td></a>
   </tr>
   <tr>
     <td>
