@@ -1,5 +1,5 @@
 
-void ripple()  {  // Ripple class
+void ripple()  {  // Iterate through points and find distance from origin, points within thickess get turned black
   for ( int i=0 ; i<W ; i++ )  {
     for ( int j=0 ; j<H ; j++ )  {
       if ( abs(PVector.dist( points[i][j].position, origin ) ) > distCounter || 

@@ -23,9 +23,8 @@ void setup()  {
  cam = new PeasyCam( this, width/2, height/2, 0, 800 );
  points = new Point[W][H];
  p = new Point( width+10, height, 0 );
- for ( int i=0 ; i<W ; i++ )  {
+ for ( int i=0 ; i<W ; i++ )  {  // Create points for plane
   for ( int j=0 ; j<H ; j++ )  {
-//   points[i][j] = new Point( width/W*i + width/W/2, height/H*j + height/H/2, 100*noise(i,j));
      points[i][j] = new Point( width/W*i + width/W/2, height/H*j + height/H/2, 0);
   }
  }
@@ -37,7 +36,7 @@ void draw()  {
   shape( drawShape() );
   stroke( 255, 255, 255 );
   strokeWeight( 10 );
-  if ( startRipple )  {
+  if ( startRipple )  {  // If we have a ripple going on, continue it
     ripple();
   }
 }
@@ -47,7 +46,7 @@ PShape drawShape()  {
   PShape sh = createShape();
   sh.beginShape( TRIANGLES );
   sh.fill( 255, 100, 100, 100 );
-  for ( int i=0 ; i<W ; i++ )  {
+  for ( int i=0 ; i<W ; i++ )  {  // Creates a grid and connects the points to form triangles
     for ( int j=0 ; j<H ; j++ )  {
       if ( j > 0 && i > 0 )  {
        sh.stroke( points[i][j].str );
@@ -67,29 +66,14 @@ PShape drawShape()  {
   point( p.position.x, p.position.y, p.position.z );
   return sh;
 }
-void mousePressed()  {
+void mousePressed()  {  // Onclick, save mouse position
  origin = new PVector( mouseX, mouseY );
  startRipple = true;
  distCounter = 0;
  rippleThickness = 100;
 }
 
-void followMouse()  {
-  PVector click = new PVector( mouseX, mouseY, 0);
-  float distance = 100;
-  PVector pointHolder = new PVector();;
-  for ( int i=0 ; i<W ; i++ )  {
-    for ( int j=0 ; j<H ; j++ )  {
-      if ( abs(PVector.dist( points[i][j].position, click ) ) < distance )  {
-        pointHolder = new PVector( i, j );
-        distance = abs(PVector.dist( points[i][j].position, click ) );
-      }
-    } 
-  }
-  p = points[(int)pointHolder.x][(int)pointHolder.y];
-}
-
-void keyPressed()  {
+void keyPressed()  {  // If the 's' key is pressed, save the current frame
  if ( key == 's' )  {
   saveFrame( "gridProximity_###.png" );
  } 

@@ -4,15 +4,15 @@
   // the loadimage path to that image.
 PImage img;
 
-void setup()  {                      
-  img = loadImage("IMG_2177.jpeg");  // Loads the image by name from the sketch folder
-  size( 854, 1280 );     // Sets the size of the screen to the size of the picture
+void setup()  {     
+  img = loadImage("ceasar.jpg");  // Loads the image by name from the sketch folder
+  size( 500, 332 );     // Sets the size of the screen to the size of the picture
   background( img );                 // draws the image as the background
   noStroke();
   rectMode( CENTER );
 }
 void draw()  {
-
+  saveFrame( "imagePixel_gif_###.png" ); 
   for ( int i = 0 ; i < img.width ; i+=3 )  {       // Iterates over each pixel in the width of the picture
     for ( int j = 0 ; j < img.height ; j+=3 )  {    // Iterates over each pixel in the height of the picture
       fill( img.get( i, j ) );                        // Sets the fill to the color current pixel
@@ -23,5 +23,5 @@ void draw()  {
 }
 
 void keyPressed()  {  // Saves current frame when any key is pressed
- saveFrame( "imagePixel_###" ); 
+ saveFrame( "imagePixel_###.png" ); 
 }
