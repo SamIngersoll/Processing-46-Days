@@ -53,7 +53,7 @@ void draw()  {
   for ( int i = 0 ; i < numCacti ; i++ )  {
     cacti.get( i ).draw(); 
   }
-  angle = 0.01;  // Rotation iterator for camera rotation
+  angle = 0.07;  // Rotation iterator for camera rotation
    
   // Draw ground
   for ( int c = 0 ; c < ( numY - 1 ) ; c++ )  // Iterates over rows except the last one, each one is connected to the following one
@@ -76,7 +76,6 @@ void draw()  {
       endShape();
     }
   }
-  saveFrame( "cacti_gif_###.jpg" );
 }
 
 void mousePressed()  {  // Restart scene on mouse press

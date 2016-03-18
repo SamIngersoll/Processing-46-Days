@@ -31,6 +31,7 @@ void draw()  {
   shape( drawShape() );
   stroke( 255, 255, 255 );
   strokeWeight( 10 );
+  saveFrame( "gridProximity_gif_###.png" );
 }
 
 PShape drawShape()  {  // Draw the landscape
