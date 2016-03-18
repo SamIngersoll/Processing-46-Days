@@ -5,7 +5,7 @@ class Spinner  {
        rotx, roty, rotz;
  PVector p_;
  color stroke;
- Spinner()  {
+ Spinner()  {  // Assign random values to the speeds of rotation
   strokeWeight = random(0, 0.5);
   rotx = random( TWO_PI );
   roty = random( TWO_PI );
@@ -17,7 +17,7 @@ class Spinner  {
   p_ = new PVector( width/2, 0, height/2 );
   stroke = color( 255, map(radius,100,500,255,0) , map(radius,100,500,0,255) );
  }
- void draw()  {
+ void draw()  {  // Draw and update the spinner
   stroke( stroke );
   strokeWeight( strokeWeight );
   pushMatrix();

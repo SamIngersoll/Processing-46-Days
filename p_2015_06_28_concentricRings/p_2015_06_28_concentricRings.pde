@@ -9,14 +9,15 @@ PeasyCam cam;
 void setup()  {
   size( 800, 800, P3D );
   noFill();
-  for ( int i=0 ; i<spinners.length ; i++ )  {
+  for ( int i=0 ; i<spinners.length ; i++ )  {  // Populate array of spinners
     spinners[i] = new Spinner();
   }
-  cam = new PeasyCam( this, 300 );
+  cam = new PeasyCam( this, 300 );  // Create camera
 }
 
 void draw()  {
-  for ( int i=0 ; i<spinners.length ; i++ )  {
+  for ( int i=0 ; i<spinners.length ; i++ )  {  // Draw and update each spinner
     spinners[i].draw();
   }
+  //saveFrame( "concentricRings_gif_###.png" );
 }
