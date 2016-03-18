@@ -11,7 +11,7 @@ PVector wind;  // Wind vector
 
 void setup()  {
   size( 800, 800 );
-  stroke( 255, 255, 255 );
+  stroke( 0, 0, 0 );
   gravity = new PVector( 0, .16 );
   wind = new PVector( 0, 0 );
   knots = new ArrayList<Knot>();
@@ -27,7 +27,7 @@ void setup()  {
   r = new Rope( knots );  // New rope from knots
 }
 void draw()  {
-  background( 0,0,0 );
+  background( 255, 255, 255 );
   r.draw();  // Draw the rope
   r.move();  // Move the rope
   wind.mult(0);  // Reset wind
