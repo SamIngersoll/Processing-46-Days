@@ -31,6 +31,7 @@ void draw()  {
   r.draw();  // Draw the rope
   r.move();  // Move the rope
   wind.mult(0);  // Reset wind
+  saveFrame( "attemptAtStrings_gif_###.png" );
 }
 void keyPressed()  {  // Change wind based on keys
  if ( keyCode == UP )
