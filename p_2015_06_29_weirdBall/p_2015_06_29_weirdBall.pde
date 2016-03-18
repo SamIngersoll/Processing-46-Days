@@ -16,17 +16,16 @@ void setup()  {
   cam = new PeasyCam( this, 420 );
   points = new ArrayList<PT>();
   float theta = TWO_PI/numPoints;
-  for ( int i=0 ; i<numPoints ; i++ )  {
+  for ( int i=0 ; i<numPoints ; i++ )  {  // Fills list with points
     points.add( new PT( theta*i, theta*i ) );
   }
 }
 void draw()  {
   //background( 255 );
-  for ( int i=0 ; i<points.size() ; i++ )  {
+  for ( int i=0 ; i<points.size() ; i++ )  {  // Draws then rotates points
     points.get(i).draw();
     points.get(i).rotate();
   }
-  saveFrame( "weirdBall_gif_###.png" );
 }
 
 void keyPressed()  {

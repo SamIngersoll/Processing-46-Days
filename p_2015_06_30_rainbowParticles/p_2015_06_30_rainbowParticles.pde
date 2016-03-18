@@ -14,14 +14,14 @@ void setup()  {
   size( 800, 800, P3D );
   background( 255 );
   cam = new PeasyCam( this, 800 );
-  for ( int i=0 ; i<pushers.length ; i++ )  {
+  for ( int i=0 ; i<pushers.length ; i++ )  {  // Creates objects in array
    pushers[i] = new Pusher( 0,0,0 ); 
   }
 }
 
 void draw()  {
 //  background( 255 );
-  for ( int i=0 ; i<pushers.length ; i++ )  {
+  for ( int i=0 ; i<pushers.length ; i++ )  {  // Updates objects
     pushers[i].update();
     pushers[i].draw();
     if ( i>1 )  {
