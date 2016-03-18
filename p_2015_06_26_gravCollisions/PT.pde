@@ -35,7 +35,7 @@ class PT  {
      collide( a );
    }
  }
- void checkCollision( PT a )  {
+ void checkCollision( PT a )  {  // Checks for collisions between two points
    if ( p_.x+r/2 >= a.p_.x-a.r/2
      && p_.x-r/2 <= a.p_.x+a.r/2
      && p_.y+r/2 >= a.p_.y-a.r/2
@@ -43,13 +43,13 @@ class PT  {
      collide( a );
    }
  }
- void collide( Attractor a )  {
+ void collide( Attractor a )  {  // Collision with attractor
    PVector collision = PVector.sub( p_, a.p_ );
    collision.div(20);
    collision.add( new PVector( -v_.y, v_.x ));
    this.v_=collision;
  }
-  void collide( PT a )  {
+  void collide( PT a )  {  // Collision with other points
    PVector collision = PVector.sub( p_, a.p_ );
    collision.div(20);
    collision.add( new PVector( -v_.y, v_.x ));

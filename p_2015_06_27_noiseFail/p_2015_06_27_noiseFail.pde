@@ -8,14 +8,15 @@ void setup()  {
   noStroke();
   fill( 20, 255, 100 );
   rect( width/10, height/10, width*.8, height*.8 );
-  for ( int i=0 ; i<pts.length ; i++ )  {
+  for ( int i=0 ; i<pts.length ; i++ )  {  // Populate array with points
     pts[i] = new PT( random(width), random(height) );
   }
 }
 void draw()  {
-  for ( int i=0 ; i<pts.length ; i++ )  {
+  for ( int i=0 ; i<pts.length ; i++ )  {  // Iterate through points and uptdate them
     pts[i].update();
     pts[i].draw();
   }
   counter += 0.1;
+  saveFrame( "noiseFail_gif_###.png" );
 }

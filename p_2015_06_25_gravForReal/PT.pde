@@ -13,7 +13,7 @@ class PT  {
   strokeWeight(4);
   point( p_.x, p_.y ); 
  }
- void update()  {
+ void update()  {  // Updates forces
   p_.add( v_ );
   v_.add( a_ ); 
   a_.mult(0);

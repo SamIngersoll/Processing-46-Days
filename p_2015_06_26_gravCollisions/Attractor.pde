@@ -19,7 +19,7 @@ class Attractor  {
 //  this.p_.x = width/2;
 //  this.p_.y = height/2;
  }
- PVector force( PT pt )  {
+ PVector force( PT pt )  {  // Applies forces
    PVector force = PVector.sub( p_, pt.p_ );
    float distance = force.mag();
    distance = constrain(distance,5.0,25.0);

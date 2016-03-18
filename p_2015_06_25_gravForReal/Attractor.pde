@@ -15,7 +15,7 @@ class Attractor  {
   this.p_.x = mouseX;
   this.p_.y = mouseY;
  }
- PVector force( PT pt )  {
+ PVector force( PT pt )  {  // Calculates forces
    PVector force = PVector.sub( p_, pt.p_ );
    float distance = force.mag();
    distance = constrain(distance,5.0,25.0);
