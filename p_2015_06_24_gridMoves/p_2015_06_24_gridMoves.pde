@@ -32,5 +32,4 @@ void draw()  {
       }
     }
   }
-  saveFrame( "gridMoves_gif_###.jpg" );
 }

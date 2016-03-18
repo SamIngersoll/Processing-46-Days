@@ -18,4 +18,5 @@ void draw()  {
    pts.get(i).applyForce(force);
    pts.get(i).update();
   }
+  //saveFrame( "gravForReal_gif_###.png" );
 }
