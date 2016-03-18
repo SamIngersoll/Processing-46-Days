@@ -11,7 +11,7 @@ Walker w;  // Declares walker
 
 void setup() {
   size( 800, 800, P3D );
-  background( 0 );
+  background( 200,255,255 );
   ellipseMode( CENTER );
   cam = new PeasyCam( this, 500 ); 
   p = new Pulse();

@@ -67,7 +67,6 @@ void draw()  {
   r.draw();  // Draws rod
   counter += increment; 
   cameraCounter += 0.07;
-  saveFrame( "uiCylinder_gif_###.png" );
 }
 
 void mousePressed()  {  // Reload the scene if the mouse is pressed
