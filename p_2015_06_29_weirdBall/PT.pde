@@ -9,7 +9,7 @@ class PT  {
  }
  void draw()  {
    pushMatrix();
-//   translate( bR_*cos( theta ), 0, bR_*sin( theta ) );
+  //translate( bR_*cos( theta ), 0, bR_*sin( theta ) );
    rotateX( cos( theta ) );
    rotateY( sin( theta ) );
    rotateZ( sin( theta ) );
