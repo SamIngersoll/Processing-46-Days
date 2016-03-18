@@ -76,6 +76,7 @@ void draw()  {
       endShape();
     }
   }
+  saveFrame( "cacti_gif_###.jpg" );
 }
 
 void mousePressed()  {  // Restart scene on mouse press
