@@ -16,8 +16,9 @@ void setup()  {
 }
 
 void draw()  {
+  background( 255, 255, 255 );
   for ( int i=0 ; i<spinners.length ; i++ )  {  // Draw and update each spinner
     spinners[i].draw();
   }
-  //saveFrame( "concentricRings_gif_###.png" );
+  saveFrame( "concentricRings_gif_###.png" );
 }
