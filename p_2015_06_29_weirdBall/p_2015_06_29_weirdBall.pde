@@ -26,6 +26,8 @@ void draw()  {
     points.get(i).draw();
     points.get(i).rotate();
   }
+  
+  
 }
 
 void keyPressed()  {

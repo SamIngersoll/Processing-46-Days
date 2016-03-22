@@ -11,7 +11,7 @@ class PT  {
  void draw()  {
    point( this.x, this.y, this.z );
  }
- void rotate()  {
+ void rotate()  {  // Rotates by increment
   this.y+= incrementY;
   this.theta+=incrementTheta;
   float x_ = this.r*cos(this.theta);
