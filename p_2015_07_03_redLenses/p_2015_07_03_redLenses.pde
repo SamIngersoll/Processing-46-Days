@@ -10,10 +10,10 @@ void setup()  {
   size( 800, 800, P3D );
   background( 255 );
   cam = new PeasyCam( this, 800 );
-  for ( int i=0 ; i<circles.length/2 ; i++ )  {
+  for ( int i=0 ; i<circles.length/2 ; i++ )  {  // Create circles
    circles[i] = new Circle( 0, -400+40*i, 0, 100, true ); 
   }
-  for ( int i=circles.length/2 ; i<circles.length ; i++ )  {
+  for ( int i=circles.length/2 ; i<circles.length ; i++ )  {  // Create other circles
    circles[i] = new Circle( 0, 500-40*i, 0, 100, false ); 
   }
 }
@@ -22,10 +22,9 @@ void draw()  {
   noStroke();
   fill( 255, 0, 0, 20);
   for ( int i=0 ; i<circles.length ; i++ )  {
-   circles[i].draw();
-   circles[i].move(); 
+   circles[i].draw();  // Draw circles
+   circles[i].move();   // Move circles
   }
-  saveFrame( "redLenses_gif_###.png" ); 
 }
 
 void keyPressed()  {

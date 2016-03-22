@@ -11,10 +11,10 @@ void setup()  {
   }
 }
 void draw()  {
-  b.draw();
-  b.update();
-  b.checkCollisions( pins );
-  for ( int i=0 ; i<pins.length ; i++ )  {
+  b.draw();  // Draws ball
+  b.update();  // Updates ball position
+  b.checkCollisions( pins );  // Checks for hits
+  for ( int i=0 ; i<pins.length ; i++ )  {  // Draws all pins
    pins[i].draw(); 
   }
 }
