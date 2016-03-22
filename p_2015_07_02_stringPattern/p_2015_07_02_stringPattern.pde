@@ -3,11 +3,11 @@ import peasy.org.apache.commons.math.*;
 import peasy.*;
 import peasy.org.apache.commons.math.geometry.*;
 
-float incrementY = 2;
-float incrementTheta = TWO_PI/100;
-float radius = 100;
+float incrementY = 2;  // Increments y value
+float incrementTheta = TWO_PI/100;  // Increments theta
+float radius = 100;  // Radius
 PT p1, p2;
-float counter = 0;
+float counter = 0;  // Counter
 
 PeasyCam cam;
 void setup()  {
@@ -27,9 +27,8 @@ void draw()  {
   }
   counter+=1;
   strokeWeight( 0.2 );
-    line( p1.p_.x, p1.p_.y, p1.p_.z,
+    line( p1.p_.x, p1.p_.y, p1.p_.z,  // Connects points
           p2.p_.x, p2.p_.y, p2.p_.z ); 
-  saveFrame( "stringPattern_gif_###.png" );
 }
 
 void keyPressed()  {

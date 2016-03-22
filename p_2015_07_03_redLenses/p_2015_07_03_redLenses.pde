@@ -25,6 +25,7 @@ void draw()  {
    circles[i].draw();
    circles[i].move(); 
   }
+  saveFrame( "redLenses_gif_###.png" ); 
 }
 
 void keyPressed()  {
