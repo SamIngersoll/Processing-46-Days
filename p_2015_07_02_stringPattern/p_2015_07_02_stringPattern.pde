@@ -29,7 +29,7 @@ void draw()  {
   strokeWeight( 0.2 );
     line( p1.p_.x, p1.p_.y, p1.p_.z,
           p2.p_.x, p2.p_.y, p2.p_.z ); 
-
+  saveFrame( "stringPattern_gif_###.png" );
 }
 
 void keyPressed()  {
