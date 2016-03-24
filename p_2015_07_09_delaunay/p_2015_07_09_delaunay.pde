@@ -10,9 +10,9 @@ void setup()  {
   for ( int i=0 ; i<pts.length ; i++ )  {
     pts[i] = new PT( random(width), random(height) ); 
   }
-  triangulate();
+  triangulate();  // Triangulates points
 }
-void draw()  {
+void draw()  {  // Draws points
   for ( int i=0 ; i<pts.length ; i++ )  {
     strokeWeight( 4 );
     pts[i].draw(); 
@@ -20,7 +20,7 @@ void draw()  {
   }
 }
 
-void triangulate()  {
+void triangulate()  {  // Tests each combination of 3 points
  TRI tester;
  for( int i=0 ; i<pts.length ; i++ )  { outerloop:
   for( int j=0 ; j<pts.length ; j++ )  {

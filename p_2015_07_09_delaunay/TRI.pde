@@ -13,7 +13,7 @@ class TRI  {
   tri.vertex( c.p_.x, c.p_.y );
   tri.endShape();
  } 
- boolean test()  {
+ boolean test()  {  // If the circle formed by the three points contains no other points, it passes
    PT c1 = new PT( lerp( points[0].p_.x, points[1].p_.x, .5 ), lerp( points[0].p_.y, points[1].p_.y, .5 ) );
    PT c2 = new PT( lerp( points[2].p_.x, points[1].p_.x, .5 ), lerp( points[2].p_.y, points[1].p_.y, .5 ) );
    float s1 = -1/((points[1].p_.y-points[0].p_.y)/(points[1].p_.x-points[0].p_.x)); 
@@ -28,8 +28,7 @@ class TRI  {
   }
  return true;
  }
- void draw()  {
+ void draw()  {  // Draws the triangle
   shape( tri );
  }
 }
-

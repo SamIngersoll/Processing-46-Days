@@ -7,7 +7,7 @@ void setup()  {
   background( 255 );
   noStroke();
   rectMode( CORNER );
-  for ( int i=0 ; i<Habitats.length ; i++ )  {
+  for ( int i=0 ; i<Habitats.length ; i++ )  {  // Creates rectangles
    for ( int j=0 ; j<Habitats[0].length ; j++ )  {
     Habitats[i][j] = new Habitat( width/HabitatsWidth*((int)random(HabitatsWidth) ), 
                            height/HabitatsHeight*((int)random(HabitatsHeight) ),
@@ -18,7 +18,7 @@ void setup()  {
    } 
   }
 }
-void draw()  {
+void draw()  {  // Moves the rectangles
   background( 255 );
   for ( int i=0 ; i<Habitats.length ; i++ )  {
    for ( int j=0 ; j<Habitats[0].length ; j++ )  {
@@ -26,5 +26,4 @@ void draw()  {
      Habitats[i][j].move(); 
    }
   }
-  saveFrame( "mites_gif_###.png" ); 
 }
