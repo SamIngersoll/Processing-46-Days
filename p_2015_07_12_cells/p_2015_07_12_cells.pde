@@ -21,8 +21,7 @@ void draw()  {
     pts[i].move();
 //    pts[i].draw(); 
     strokeWeight( 1 );
-  }
-  saveFrame( "textParticles_###.png" ); 
+  } 
 }
 
 void triangulate()  {

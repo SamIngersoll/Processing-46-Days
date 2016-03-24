@@ -17,4 +17,5 @@ void draw()  {
    line( x, -sqrt( sq(r)-sq(x)), x, sqrt( sq(r)-sq(x)));
  }
  counter+=.05;
+ //saveFrame( "textParticles_###.png" );
 }
