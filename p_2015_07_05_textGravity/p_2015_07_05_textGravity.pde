@@ -4,7 +4,7 @@ PT[] PTs = new PT[3000];
 void setup()  {
   size( 800, 800 );
   noStroke();
-  img = loadImage( "words.jpg" );
+  img = loadImage( "words.jpg" );  // Image to catch particles
   for ( int i=0 ; i<PTs.length ; i++ )  {
    PTs[i] = new PT( random(width), random(height), random(3, 20) ); 
   }
@@ -17,4 +17,5 @@ void draw()  {
    PTs[i].check();
    PTs[i].checkWalls(); 
   }
+  saveFrame( "textGravity_gif_###.png" );
 }
