@@ -19,6 +19,7 @@ void draw()  {
     pts[i].draw(); 
     strokeWeight( 1 );
   }
+  saveFrame( "delaunayRandMovers_gif_###.png" ); 
 }
 
 void triangulate()  {
