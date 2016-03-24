@@ -16,4 +16,5 @@ void draw()  {
    points[i].theta+=0.01;
    points[i].draw(); 
   }
+   //saveFrame( "textParticles_###.png" );
 }
