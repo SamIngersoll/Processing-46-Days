@@ -18,28 +18,25 @@ class PT  {
   this.r = r;
   this.dead = false;
  } 
- void draw()  {
+ void draw()  {  // Draw circles
   fill( map(this.v_.x, -15, 15, 200, 255 ), 
         map( this.v_.y, -15, 15, 0, 255 ), 
         map( this.v_.y, -15, 15, 200, 255 ) );
   ellipse( p_.x, p_.y, r, r ); 
  }
- void update()  {
+ void update()  {  // Adds acceleration towards center of mass
      this.v_.add( a_ );
      v_.limit( 15 );
-//     a_.limit(  );
      this.p_.add( v_ );
    this.a_.mult(0.99);
  }
- void check()  {
+ void check()  {  // Checks if particles are on dark parts of image, if so, they are killed
   if ( ((int)random(5)) == 0 )
     if ( img.get((int)p_.x, (int)p_.y ) < -10 )  {
-//     a_.mult(0);
-//     v_.mult(0);
      this.dead = true;
     } 
  }
- void checkWalls()  {
+ void checkWalls()  {  // Isnt called, checks walls
   if ( p_.x - r/2 < 0 )  {
    this.v_.x = abs(v_.x);
    this.a_.x = abs(a_.x);
@@ -61,7 +58,7 @@ class PT  {
    this.v_.add( new PVector( random(-rand, rand), random(-rand, rand) ) );
   } 
  }
- void attract()  {
+ void attract()  {  // Creates vector towards center of mass
      PVector add = new PVector( 0, 0 );
      PVector average = new PVector( 0, 0 );
      for ( int i=0 ; i<PTs.length ; i++ )  {
@@ -71,12 +68,7 @@ class PT  {
          add.div( -PVector.dist( this.p_, PTs[i].p_ )/10 );            
          average.add( add);
        }
-     
-//     average.div(PTs.length*100);
-//   average.normalize();
      this.a_.add(average);
-   }
+     }
  }
 }
-
-
