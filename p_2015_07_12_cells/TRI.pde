@@ -34,7 +34,7 @@ class TRI  {
   centers[2]=new PT( lerp( points[2].p_.x, points[0].p_.x, .5 ), lerp( points[2].p_.y, points[0].p_.y, .5 ) );
   cell = createShape();
   cell.beginShape();
-  cell.fill(255);
+  cell.fill(noise(centers[0].p_.x,centers[0].p_.y));
   cell.vertex( centers[0].p_.x, centers[0].p_.y );
   cell.bezierVertex(
                     points[1].p_.x, points[1].p_.y,
@@ -60,4 +60,3 @@ class TRI  {
    shape(cell);
  }
 }
-
