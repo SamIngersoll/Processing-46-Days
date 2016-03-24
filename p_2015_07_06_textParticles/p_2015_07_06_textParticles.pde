@@ -28,6 +28,7 @@ void draw()  {
      PTs[i].attract();
    }
   }
+  saveFrame( "textParticles_gif_###.png" );
 }
 void mousePressed()  {
  setup(); 

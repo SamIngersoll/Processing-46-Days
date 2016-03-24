@@ -17,5 +17,4 @@ void draw()  {
    PTs[i].check();
    PTs[i].checkWalls(); 
   }
-  saveFrame( "textGravity_gif_###.png" );
 }
