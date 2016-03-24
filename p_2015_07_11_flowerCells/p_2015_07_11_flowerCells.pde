@@ -12,13 +12,15 @@ void setup()  {
   }
 }
 void draw()  {
+  background( 255 );
   triangulate();
   for ( int i=0 ; i<pts.length ; i++ )  {
     strokeWeight( 4 );
-//    pts[i].move();
+   pts[i].move();
     pts[i].draw(); 
     strokeWeight( 1 );
   }
+  saveFrame( "textParticles_###.png" ); 
 }
 
 void triangulate()  {
